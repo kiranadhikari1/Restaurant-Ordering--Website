@@ -1,0 +1,49 @@
+
+//- if session
+a(href="/home") Home Page 
+<br>
+a(href="/users") Users
+<br>
+a(href="/users/"+id) User Profile
+<br>
+a(href="/order") Order Form
+<br>
+button(type= "submit")#logoutbutton Log out
+//- else
+//-     a(href="/home") Home Page 
+//-     <br>
+//-     a(href="/users") Users
+//-     <br>
+//-     a(href="/register") Register
+//-     <br>
+//-     a(href="/login") Login
+//-     <br>
+
+head
+  title Order Form
+  style.
+    .column {
+    float: left;
+    }
+    .left{
+    width: 10%;
+    }
+    .right {
+    width: 25%;
+    }
+    .middle {
+    width: 65%;
+    }
+body(onload="init()")
+select#restaurant-select
+br
+br
+div(class='info')#info
+div#info
+div#main
+  div(class='column left')#left
+  div#middle.column.middle
+  div(class='column right')#right.column.right
+script(src='orderform.js')
+
+script(src="client.js")

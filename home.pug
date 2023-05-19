@@ -1,0 +1,21 @@
+
+if session
+    a(href="/home") Home Page 
+    <br>
+    a(href="/users") Users
+    <br>
+    a(href="/users/"+id) User Profile
+    <br>
+    a(href="/order") Order Form
+    <br>
+    button(type= "submit")#logoutbutton Log out
+else
+    a(href="/home") Home Page 
+    <br>
+    a(href="/users") Users
+    <br>
+    a(href="/register") Register
+    <br>
+    a(href="/login") Login
+
+script(src="client.js")

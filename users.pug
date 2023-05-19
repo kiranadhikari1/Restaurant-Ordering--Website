@@ -1,0 +1,30 @@
+h1 Users
+
+if (session.loggedin)
+    a(href="/home") Home Page 
+    <br>
+    a(href="/users") Users
+    <br>
+    a(href="/users/"+id) User Profile
+    <br>
+    a(href="/order") Order Form
+    <br>
+    button(type= "submit")#logoutbutton Log out
+    <br>
+    <br>
+else
+    a(href="/home") Home Page 
+    <br>
+    a(href="/users") Users
+    <br>
+    a(href="/register") Register
+    <br>
+    a(href="/login") Login
+    <br>
+    <br>
+
+each user in users 
+    if user.privacy == false
+        <a href ="/users/#{user.id}">#{user.username}<br></a>
+
+script(src="client.js")

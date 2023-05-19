@@ -1,0 +1,42 @@
+
+if  session.loggedin
+    h1 #{user.username}'s Profile
+    a(href="/home") Home Page 
+    <br>
+    a(href="/users") Users
+    <br>
+    a(href="/users/"+id) User Profile
+    <br>
+    a(href="/order") Order Form
+    <br>
+    button(type= "submit")#logoutbutton Log out
+    <br>
+    <br>
+    if session.username == user.username
+        p1 Private Mode:
+        <br>
+        form(action='/users', method='PUT')
+            p1
+                p2 On
+                input(type="radio" name = "private")
+                <br>
+                p2 Off
+                input(type="radio" name = "private")
+                <br>
+            input(type='submit', value='Submit')
+
+    p1 Order History: 
+
+else
+    h1 #{user.username}'s Profile
+    a(href="/home") Home Page 
+    <br>
+    a(href="/users") Users
+    <br>
+    a(href="/register") Register
+    <br>
+    a(href="/login") Login
+    <br>
+    p1 Order History: 
+
+script(src='/client.js')
